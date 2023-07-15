@@ -1,0 +1,30 @@
+Q5.What are the differences between @RequestParam and @PathVariable annotations?
+
+
+
+
+
+ANSWER:
+
+
+
+
+In Spring MVC, both the `@RequestParam` and `@PathVariable` annotations are used to extract data from the incoming HTTP request, but they serve different purposes and have different use cases. Here are the main differences between these two annotations:
+
+1. Purpose:
+   - `@RequestParam`: It is used to extract query parameters or form data from the request URL or request body. Query parameters are typically appended to the URL after a question mark (`?`).
+   - `@PathVariable`: It is used to extract data from the URI path itself. It allows you to define placeholders in the URL path and extract their values dynamically.
+
+2. Syntax:
+   - `@RequestParam`: It is used as a method parameter annotation and is typically applied to individual method parameters. It can have attributes like `value` (to specify the parameter name), `required` (to indicate if the parameter is mandatory), `defaultValue` (to provide a default value if the parameter is not present in the request), and others.
+   - `@PathVariable`: It is used as a placeholder within the URL path itself, typically enclosed within curly braces `{}`. It is applied to method parameters and is used to map a specific segment of the URL path to the parameter.
+
+3. Usage:
+   - `@RequestParam`: It is suitable for extracting request parameters that are appended to the URL or sent as form data. For example, if the URL is `/users?id=123`, you can use `@RequestParam("id")` to extract the value `123`.
+   - `@PathVariable`: It is useful when you want to extract dynamic values from the URL path itself. For example, if the URL is `/users/{id}`, you can use `@PathVariable("id")` to extract the value of `id` from the path, such as `/users/123`.
+
+4. Request Binding:
+   - `@RequestParam`: It binds to query parameters or form data sent in the request. It can handle primitive types, wrapper classes, and can perform type conversion automatically.
+   - `@PathVariable`: It binds to specific segments of the URL path. It is useful when you need to extract path parameters that are part of the URL structure. It can also handle type conversion and binding to custom objects, using additional annotations like `@PathVariable("id") Long userId`.
+
+In summary, `@RequestParam` is used to extract query parameters or form data from the request URL or body, while `@PathVariable` is used to extract dynamic values directly from the URL path. They have different use cases and are suitable for different scenarios in Spring MVC applications.

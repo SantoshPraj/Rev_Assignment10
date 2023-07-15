@@ -1,0 +1,54 @@
+Q7.What is the role of @ModelAttribute annotation?
+
+
+
+
+
+ANSWER:
+
+
+
+
+The `@ModelAttribute` annotation in Spring MVC is used to bind request data, such as form input or query parameters, to a method parameter or a model attribute. It plays a significant role in data binding and populating the model with data.
+
+The `@ModelAttribute` annotation can be used in the following ways:
+
+1. Method Parameter Binding:
+   - When applied to a method parameter, `@ModelAttribute` binds request data to that parameter. It is typically used in controller methods to extract data from the request and map it to a method parameter.
+   - For example, consider a form submission where the form fields have the same names as the properties of an object. By using `@ModelAttribute` on a method parameter, Spring MVC will automatically bind the submitted form data to the corresponding object.
+   - Example: 
+     ```java
+     @PostMapping("/user")
+     public String addUser(@ModelAttribute User user) {
+         // Process the user object
+         // ...
+     }
+     ```
+
+2. Model Attribute Creation:
+   - When applied to a method, `@ModelAttribute` can be used to create a model attribute and add it to the model. This is useful when you want to pre-populate the model with data before rendering the view.
+   - The method annotated with `@ModelAttribute` is executed before any request handler method and adds the attribute to the model. It can perform some data retrieval or initialization logic to populate the attribute.
+   - Example:
+     ```java
+     @ModelAttribute("categories")
+     public List<Category> getCategories() {
+         // Retrieve categories from a database or other source
+         // ...
+         return categories;
+     }
+     ```
+     In the above example, the `getCategories()` method retrieves a list of categories and adds it to the model with the name "categories". This attribute can then be accessed in the view for rendering purposes.
+
+3. Attribute Name Specification:
+   - `@ModelAttribute` can be used to specify the name of the model attribute explicitly. By default, the attribute name is derived from the parameter or method name. However, if needed, you can provide a custom name using the `value` attribute of `@ModelAttribute`.
+   - Example:
+     ```java
+     @PostMapping("/user")
+     public String addUser(@ModelAttribute("newUser") User user) {
+         // Process the newUser object
+         // ...
+     }
+     ```
+     In the above example, the model attribute name is explicitly set as "newUser" using `@ModelAttribute("newUser")`.
+
+The `@ModelAttribute` annotation is an important tool for data binding and model population in Spring MVC. It helps in extracting request data into method parameters, creating model attributes, and specifying custom attribute names. By using `@ModelAttribute`, you can easily handle request data and populate the model with the necessary data for processing and rendering in the view.

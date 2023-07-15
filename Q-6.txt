@@ -1,0 +1,27 @@
+Q6.What is the Model in Spring MVC?
+
+
+
+
+
+ANSWER:
+
+
+
+In Spring MVC, the Model represents the data that needs to be passed between the controller and the view. It serves as a container for holding the application data that will be rendered and displayed to the user.
+
+The Model in Spring MVC has the following key characteristics:
+
+1. Data Storage: The Model object holds the data that needs to be shared between the controller and the view. It acts as a container for storing the application-specific data, such as user information, form data, or any other relevant data that needs to be displayed or manipulated in the view.
+
+2. Model Attributes: Data in the Model is typically stored as model attributes. A model attribute is a key-value pair, where the key is a String representing the attribute name and the value is the corresponding data object. The model attributes can be accessed and manipulated by the controller to populate the data that will be rendered in the view.
+
+3. Sharing Data: The Model serves as a communication channel between the controller and the view. The controller populates the Model with the necessary data, and the view accesses that data to render the response. By sharing the Model, the controller can pass data to the view, and the view can display or process that data as required.
+
+4. Binding Data: The Model also facilitates data binding between the user input and the application objects. When a user submits a form, the form data can be bound to specific objects or beans in the Model. This allows for automatic conversion and mapping of the form data into corresponding Java objects, simplifying the handling of user input.
+
+5. Scoping: In Spring MVC, the Model is typically scoped to the request. It means that a new instance of the Model is created for each request, and it is only available within that specific request. Once the request is processed and the response is sent, the Model is discarded.
+
+6. ModelMap: The Model object in Spring MVC is often represented by a class called ModelMap, which is an implementation of the Model interface. ModelMap provides methods for adding, accessing, and manipulating model attributes, making it convenient for working with the Model in Spring MVC controllers.
+
+Overall, the Model in Spring MVC plays a crucial role in facilitating the exchange of data between the controller and the view. It allows the controller to pass data to the view, and the view to access and display that data to the user. It provides a structured and organized approach to managing the application data within the MVC architecture.

@@ -1,0 +1,32 @@
+Q1.What is the Spring MVC framework?
+
+
+
+ANSWER:
+
+
+The Spring MVC (Model-View-Controller) framework is a widely used web application framework for building Java-based enterprise applications. It is part of the larger Spring Framework, which provides a comprehensive ecosystem for developing Java applications.
+
+Spring MVC follows the MVC architectural pattern, which separates an application into three major components:
+
+1. Model: Represents the data and business logic of the application. It encapsulates the application's data and provides methods to manipulate and access that data.
+
+2. View: Handles the presentation layer of the application. It is responsible for rendering the user interface and displaying data to the user. In Spring MVC, views are typically created using technologies like JavaServer Pages (JSP), Thymeleaf, or Velocity.
+
+3. Controller: Acts as an intermediary between the model and the view. It receives user requests, processes them, and determines the appropriate model to use and the view to render. Controllers in Spring MVC are implemented as classes annotated with special annotations to handle specific HTTP requests.
+
+Key features of the Spring MVC framework include:
+
+1. Request-Handling: Spring MVC provides a flexible and powerful mechanism for handling incoming HTTP requests and mapping them to appropriate controllers based on defined URL patterns.
+
+2. DispatcherServlet: At the core of the framework is the DispatcherServlet, which acts as a front controller for the application. It receives all incoming requests, delegates them to the appropriate controllers, and manages the entire request-processing lifecycle.
+
+3. Flexible View Resolution: Spring MVC supports various view technologies, allowing developers to choose from a range of options to render the user interface. It integrates well with JSP, Thymeleaf, and other templating engines.
+
+4. Data Binding: The framework provides robust data binding capabilities, allowing automatic conversion between HTTP request parameters and Java objects. This simplifies the handling of form data and improves productivity.
+
+5. Validation: Spring MVC includes support for data validation using annotations or custom validators. It helps ensure that the data entered by users is valid before processing it.
+
+6. Interceptor Support: Interceptors allow developers to add cross-cutting concerns to the request-processing workflow. They can be used to perform tasks such as authentication, logging, or modifying the request/response objects.
+
+Overall, the Spring MVC framework offers a structured and modular approach to building web applications in Java, promoting separation of concerns and providing numerous features and extensions to support enterprise-grade development.

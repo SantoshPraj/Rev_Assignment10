@@ -1,0 +1,25 @@
+Q9.What does REST stand for? and what is RESTful web services?
+
+
+
+ANSWER:
+
+
+
+REST stands for Representational State Transfer. It is an architectural style for designing networked applications. RESTful web services, also known as RESTful APIs, adhere to the principles of REST and use the HTTP protocol to provide a lightweight and scalable approach for building web services.
+
+Here are the key aspects of REST and RESTful web services:
+
+1. Stateless Communication: REST emphasizes stateless communication between the client and the server. Each request from the client to the server should contain all the necessary information to fulfill the request, and the server should not store any client state between requests. This allows for scalability, as servers can handle requests independently without relying on session information.
+
+2. Resource-Oriented: In REST, resources are the key concept. Resources are entities that are identified by unique URLs (Uniform Resource Locators). Clients interact with these resources through standard HTTP methods such as GET, POST, PUT, DELETE, etc. Each resource can have multiple representations, such as JSON or XML, which are typically exchanged between the client and the server.
+
+3. Uniform Interface: RESTful web services follow a uniform interface, which consists of standard HTTP methods and status codes. HTTP methods like GET (retrieve resource), POST (create resource), PUT (update resource), and DELETE (remove resource) are used to perform actions on resources. HTTP status codes indicate the result of the request, such as 200 OK, 201 Created, 404 Not Found, etc.
+
+4. Hypermedia as the Engine of Application State (HATEOAS): HATEOAS is a principle in REST that allows clients to navigate through the web service by following hyperlinks contained in the response. The server includes links to related resources and actions in the response, enabling clients to discover and interact with the available functionality dynamically.
+
+5. Stateless Server: In a RESTful architecture, the server does not maintain any client state. This means that each request from the client must contain all the necessary information for the server to process the request and produce the response. This simplifies server implementation and promotes scalability and reliability.
+
+6. Format Agnostic: RESTful web services are format agnostic, meaning they can work with various data formats such as JSON, XML, or even plain text. The choice of the data format is typically based on the preferences of the client and the server, and they can negotiate the format using the `Accept` and `Content-Type` headers in the HTTP request and response.
+
+RESTful web services have gained popularity due to their simplicity, scalability, and compatibility with existing web technologies. They provide a standard and flexible approach for building APIs that can be easily consumed by a wide range of clients, including web browsers, mobile applications, and other web services.
